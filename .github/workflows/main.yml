@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: dkdevelopment/argo-app:$GITHUB_SHA
+          tags: dkdevelopment/argo-app:${{ env.GITHUB_SHA }}
