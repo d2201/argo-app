@@ -2,7 +2,7 @@ name: Update
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
