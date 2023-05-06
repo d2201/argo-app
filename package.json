@@ -1,0 +1,15 @@
+{
+  "name": "argo-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "repository": "git@github.com:d2201/argo-app.git",
+  "author": "d2201 <torozniks+gh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
