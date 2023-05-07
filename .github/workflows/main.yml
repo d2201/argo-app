@@ -27,3 +27,12 @@ jobs:
           echo "publishing image sha: $GITHUB_SHA"
           docker build -t dkdevelopment/argo-app:$GITHUB_SHA .
           docker push dkdevelopment/argo-app:$GITHUB_SHA
+      
+      - name: Save version in yaml
+        run: |
+          echo "version: $GITHUB_SHA" > release/version.yaml
+          git config --global user.email "dk-ci@users.noreply.github.com"
+          git config --global user.name "dk-ci"
+          git add release/version.yaml
+          git commit -m "[skip ci] Update yaml version to $GITHUB_SHA"
+          git push
