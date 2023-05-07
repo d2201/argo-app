@@ -22,9 +22,8 @@ jobs:
           username: ${{ secrets.DOCKER_LOGIN }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build & Push image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: dkdevelopment/argo-app:${{ env.GITHUB_SHA }}
+      - name: Build & Push Image
+        run: |
+          echo "publishing image sha: $GITHUB_SHA"
+          docker build -t dkdevelopment/argo-app:$GITHUB_SHA .
+          docker push dkdevelopment/argo-app:$GITHUB_SHA
