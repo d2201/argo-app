@@ -15,7 +15,7 @@ app.all('*', (req, res) => {
   res.send(`
 <html>
 <body>
-  <h5>DEMO super cool argo charts 3.0.0, wow. Payload you're sending</h5>
+  <h5>DEMO WEBSITE v1, wow. Payload you're sending</h5>
   <pre>${JSON.stringify(result, null, 2)}</pre>
 </body>
 </html>  
